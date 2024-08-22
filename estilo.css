@@ -41,7 +41,7 @@ body
     padding: 2.4rem;
     gap: 1.5rem;
     border-radius: 10px;
-    border-top-right-radius: 70px;
+    border-top-right-radius: 100px;
     background-color: hsl(228, 56%, 26%);
     transition: all 0.3s ease;
 }
