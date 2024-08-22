@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("img/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+    background-color: hsl(229, 57%, 11%);
+}
+
+.container
+{
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* PRIMEIRO CARD */
+.sessao-1
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 22.5rem;
+    padding: 2.4rem;
+    gap: 1.5rem;
+    border-radius: 10px;
+    border-top-right-radius: 70px;
+    background-color: hsl(228, 56%, 26%);
+    transition: all 0.3s ease;
+}
+
+.sessao-1:hover
+{
+    transform: translateY(-7px);
+}
+
+.box-icones
+{
+    display: flex;
+    gap: 1rem;
+}
+
+.box-icones-botao
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    border-radius: 10px;
+    background-color: hsl(229, 57%, 11%);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.box-icones-botao:hover
+{
+    transform: scale(104%);
+}
+
+
+/* SEGUNDO CARD */ 
+.sessao-2
+{
+    display: flex;
+    flex-direction: column;
+    width: 34rem;
+    height: 9rem;
+    padding: 2.4rem;
+    gap: 1rem;
+    border-radius: 10px;
+    background-color: hsl(228, 56%, 26%);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.sessao-2:hover
+{
+    transform: translateY(-7px);
+}
+
+.box-qtd-sobra
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    right: 2rem;
+    top: -2.7rem;
+    width: 10.8rem;
+    height: 4.3rem;
+    border-radius: 10px;
+    padding: 1.4rem;
+    background-color: hsl(0, 0%, 100%);
+}
+
+#box-qtd-sobra-a
+{
+    font-weight: 700;
+    font-size: 38px;
+    color: hsl(229, 57%, 11%);
+}
+
+#box-qtd-sobra-b
+{
+    font-weight: 700;
+    font-size: 14px;
+    color: hsl(229, 7%, 55%);
+    text-transform: uppercase;
+}
+
+.triangulo
+{
+    position: absolute;
+    right: 0rem;
+    top: 2.5rem;
+    width: 0; 
+    height: 0; 
+    border-top: 25px solid transparent;
+    border-right: 25px solid hsl(0, 0%, 100%);
+    border-bottom: 25px solid transparent;
+}
+
+.sessao-2-p, .box-barra-info span
+{
+    font-size: 14px;
+    font-weight: 400;
+    color: hsl(243, 100%, 93%);
+}
+
+.box-barra-info span
+{
+    font-weight: 700;
+}
+
+.box-barra
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.barra-fundo
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 22px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 20px;
+}
+
+.barra
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70%;
+    height: 18px;
+    margin-left: 2px;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.barra-circulo
+{
+    height: 14px;
+    width: 14px;
+    border-radius: 100px;
+    background-color: hsl(0, 0%, 100%);
+    margin-right: 2px;
+}
+
+.box-barra-info
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+/*  CRÉDITOS */
+.creditos
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    gap: 0.3rem;
+    color: hsl(243, 100%, 93%);
+}
+
+.creditos a
+{
+    text-decoration: none;
+    color: hsl(243, 84%, 81%);
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+
+.creditos a:hover
+{
+    color: hsl(243, 48%, 60%);
+}
+
+.eu
+{
+    font-weight: 700;
+}
+
+
+
+/* RESPONSIVIDADE */
+@media(max-width: 1008px)
+{
+    .container
+    {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 4rem;
+    }
+    .sessao-1, .sessao-2
+    {
+        max-width: 21.5rem;
+    }
+    .sessao-2
+    {
+        justify-content: flex-start;
+        height: 11rem;
+    }
+    .box-qtd-sobra
+    {
+        right: 5.5rem;
+        top: 8.8rem;
+    }
+    .triangulo
+    {
+        display: none;
+    }
+}
+
+@media(max-width: 392px)
+{
+    body
+    {
+        background: url("img/bg-mobile.png");
+        background-size: cover;
+    }
+    .sessao-1, .sessao-2
+    {
+        max-width: 20rem;
+    } 
+}
